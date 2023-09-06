@@ -75,8 +75,8 @@ $users = $result->fetch_all(MYSQLI_ASSOC);
                                             <td><?php echo $user['name']; ?></td>
                                             <td><?php echo $user['email']; ?></td>
                                             <td>
-                                                <a href="" class="btn btn-primary">Edit</a>
-                                                <a href="" class="btn btn-danger">Delete</a>
+                                                <a href="./edit-user.php?id=<?php echo $user['id'] ?>" class="btn btn-primary">Edit</a>
+                                                <a href="./delete-user.php?id=<?php echo $user['id'] ?>" class="btn btn-danger">Delete</a>
                                             </td>
                                         </tr>
                                     <?php
@@ -86,7 +86,7 @@ $users = $result->fetch_all(MYSQLI_ASSOC);
                             </table>
                         <?php
                         } else { ?>
-                        <div class="alert alert-info m-0">No record found!</div>
+                            <div class="alert alert-info m-0">No record found!</div>
                         <?php
                         }
                         ?>
